@@ -3,70 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App - Your Developer Name</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Histo Véhicule</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text */
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #1e1e1e; /* Darker background for cards */
+            border: none;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card img {
+            max-width: 100%;
+            border-bottom: 1px solid #333;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+        }
+        .card-text {
+            flex: 1;
+            padding: 20px;
+        }
+        .card-text p {
+            margin: 0;
+        }
+        .feature-image {
+            flex: 1;
+            max-width: 50%;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .card-body {
+                flex-direction: column;
+            }
+            .feature-image {
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#screenshots">Screenshots</a></li>
-                <li><a href="#download">Download</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Welcome to My App</h1>
-            <p>The best app for your needs!</p>
-            <a href="https://play.google.com/store/apps/details?id=com.ghilesdev.histovehicule" class="btn">Download Now</a>
+    <div class="container">
+        <header class="text-center">
+            <h1 class="display-4">Bienvenue dans Histo Véhicule</h1>
+            <p class="lead">Découvrez Histo Véhicule et reprenez le contrôle</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ghilesdev.histovehicule" class="btn btn-primary btn-lg">Télécharger depuis le Play Store</a>
+        </header>
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="feature-image">
+                            <img src="img/main.png" alt="Feature 1">
+                        </div>
+                        <div class="card-text">
+                            <h5 class="card-title">Choisissez le format de votre immatriculation</h5>
+                            <p class="card-text">Recherchez l'historique de votre véhicule peu importe son type d'immatriculation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="feature-image">
+                            <img src="img/km.png" alt="Feature 2">
+                        </div>
+                        <div class="card-text">
+                            <h5 class="card-title">Vérifiez le kilométrage</h5>
+                            <p class="card-text">Vérifiez que le kilométrage de votre véhicule n'a pas été trafiqué.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="feature-image">
+                            <img src="img/ct.png" alt="Feature 3">
+                        </div>
+                        <div class="card-text">
+                            <h5 class="card-title">Vérifiez les CTs</h5>
+                            <p class="card-text">Vérifiez les précédents contrôle techniques.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="feature-image">
+                            <img src="img/categories.png" alt="Feature 4">
+                        </div>
+                        <div class="card-text">
+                            <h5 class="card-title">Et plus encore ...</h5>
+                            <p class="card-text">Grâce au menu latérale, vérifiez d'autres infos utiles, comme les caractéristiques techniques du véhicule ou encore sa situation administrative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-    
-    <section id="features">
-        <h2>Features</h2>
-        <div class="feature">
-            <h3>Feature One</h3>
-            <p>Description of the first feature.</p>
-        </div>
-        <div class="feature">
-            <h3>Feature Two</h3>
-            <p>Description of the second feature.</p>
-        </div>
-        <div class="feature">
-            <h3>Feature Three</h3>
-            <p>Description of the third feature.</p>
-        </div>
-    </section>
-    
-    <section id="screenshots">
-        <h2>Screenshots</h2>
-        <div class="screenshot">
-            <img src="img/main.png" alt="Screenshot 1">
-            <p>Screenshot 1 Description</p>
-        </div>
-        <div class="screenshot">
-            <img src="img/km.png" alt="Screenshot 2">
-            <p>Screenshot 2 Description</p>
-        </div>
-        <div class="screenshot">
-            <img src="img/ct.png" alt="Screenshot 3">
-            <p>Screenshot 3 Description</p>
-        </div>
-        <div class="screenshot">
-            <img src="img/categories.png" alt="Screenshot 4">
-            <p>Screenshot 3 Description</p>
-        </div>
-    </section>
-    
-    <section id="download">
-        <h2>Download Now</h2>
-        <a href="https://play.google.com/store/apps/details?id=com.ghilesdev.histovehicule" class="btn">Download on Google Play</a>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Your Developer Name. All rights reserved.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+
+        <footer class="text-center mt-4">
+            <p>© 2024 Histo Véhicule. Tout droits réservés.</p>
+        </footer>
+    </div>
 </body>
 </html>
